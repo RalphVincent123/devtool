@@ -12,29 +12,34 @@ const App = () => {
 
   return (
     <main className="w-screen h-screen p-10 flex flex-col justify-center">
-      <div className="flex flex-col justify-center items-center gap-4 w-full h-full">
-        <Editor />
-        <div className="w-[60%] h-[30%]">
+      <div className="flex justify-around w-full h-full">
+        <div className="w-[32%] h-full">
+          <Label className="block mb-2 w-full">Editor:</Label>
+          <Editor className="h-full w-full" />
+        </div>
+
+        <div className="w-[32%] h-full">
           <Label htmlFor="input" className="block mb-2">
             Input:
           </Label>
           <Textarea
-            className="h-[85%]"
+            className="h-full w-full"
             onChange={(e) => setInputHtml(e.target.value)}
             id="input"
           />
         </div>
 
-        <div className="w-[60%] h-[30%]">
+        <div className="w-[32%] h-full">
           <Label htmlFor="output" className="block mb-2">
             Output:
           </Label>
-          <Textarea
+          {/* <Textarea
             className="h-[85%]"
             value={mappedValue}
             onChange={() => {}}
             id="output"
-          />
+          /> */}
+          <Editor data={mappedValue} className="h-full w-full" />
         </div>
       </div>
     </main>

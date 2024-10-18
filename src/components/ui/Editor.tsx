@@ -17,9 +17,14 @@ import {
 
 import "ckeditor5/ckeditor5.css";
 
-const Editor = () => {
+interface IEditor {
+  data?: string;
+  className?: string;
+}
+
+const Editor = ({ data, className }: IEditor) => {
   return (
-    <div style={{ width: "60%", height: "30%", overflow: "auto" }}>
+    <div className={className} style={{ overflow: "auto" }}>
       <CKEditor
         editor={ClassicEditor}
         config={{
@@ -52,6 +57,7 @@ const Editor = () => {
             Image,
           ],
         }}
+        data={data ? data : ""}
       />
     </div>
   );
