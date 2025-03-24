@@ -8,22 +8,25 @@ import { getMappedUrl } from "./logic";
 const App = () => {
   const [inputHtml, setInputHtml] = useState("");
   const [lang, setLang] = useState<"en" | "de" | "ru">("en");
-
-  const mappedValue = getMappedUrl(
-    urlsMapping[lang].oldUrls,
-    urlsMapping[lang].newUrls,
-    inputHtml
-  );
+  const [outputHtml, setOutputHtml] = useState("en");
 
   useEffect(() => {
-    setLang(window.location.href.split("/").at(-1) as "en" | "de" | "ru");
+    if (typeof window !== "undefined") {
+      setLang(window.location.href.split("/").at(-1) as "en" | "de" | "ru");
+    }
   }, []);
 
-  // useEffect(() => {
-  //   if (window.location.pathname === "/") {
-  //     window.location.href = "/en";
-  //   }
-  // }, []);
+  useEffect(() => {
+    if (lang) {
+      const mappedValue = getMappedUrl(
+        urlsMapping[lang].oldUrls,
+        urlsMapping[lang].newUrls,
+        inputHtml
+      );
+
+      setOutputHtml(mappedValue);
+    }
+  }, [lang, inputHtml]);
 
   return (
     <main className="w-screen h-screen p-10 flex flex-col justify-center">
@@ -54,7 +57,7 @@ const App = () => {
             onChange={() => {}}
             id="output"
           /> */}
-          <Editor data={mappedValue} className="h-full w-full" />
+          <Editor data={outputHtml} className="h-full w-full" />
         </div>
       </div>
     </main>
