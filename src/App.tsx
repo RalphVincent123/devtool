@@ -1,14 +1,29 @@
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Editor from "./components/ui/Editor";
 import { Label } from "./components/ui/label";
 import { Textarea } from "./components/ui/Textarea";
-import { newUrls, oldUrls } from "./constants";
+import urlsMapping from "./constants";
 import { getMappedUrl } from "./logic";
 
 const App = () => {
   const [inputHtml, setInputHtml] = useState("");
+  const [lang, setLang] = useState<"en" | "de" | "ru">("en");
 
-  const mappedValue = getMappedUrl(oldUrls, newUrls, inputHtml);
+  const mappedValue = getMappedUrl(
+    urlsMapping[lang].oldUrls,
+    urlsMapping[lang].newUrls,
+    inputHtml
+  );
+
+  useEffect(() => {
+    setLang(window.location.href.split("/").at(-1) as "en" | "de" | "ru");
+  }, []);
+
+  useEffect(() => {
+    if (window.location.pathname === "/") {
+      window.location.href = "/en";
+    }
+  }, []);
 
   return (
     <main className="w-screen h-screen p-10 flex flex-col justify-center">
