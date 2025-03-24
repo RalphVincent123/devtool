@@ -19,11 +19,11 @@ const App = () => {
     setLang(window.location.href.split("/").at(-1) as "en" | "de" | "ru");
   }, []);
 
-  useEffect(() => {
-    if (window.location.pathname === "/") {
-      window.location.href = "/en";
-    }
-  }, []);
+  // useEffect(() => {
+  //   if (window.location.pathname === "/") {
+  //     window.location.href = "/en";
+  //   }
+  // }, []);
 
   return (
     <main className="w-screen h-screen p-10 flex flex-col justify-center">
