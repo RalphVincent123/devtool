@@ -96,7 +96,9 @@ import { getMappedUrl } from "./logic";
 const App = () => {
   const [inputHtml, setInputHtml] = useState("");
   const [outputHtml, setOutputHtml] = useState("");
-  const [lang, setLang] = useState<"en" | "de" | "ru">("en");
+  const [lang, setLang] = useState<"en" | "de" | "ru" | "contentReleaseEN">(
+    "en"
+  );
 
   useEffect(() => {
     if (urlsMapping[lang]) {
@@ -113,6 +115,16 @@ const App = () => {
     <main className="w-screen h-screen p-10 flex flex-col justify-center">
       <h2 className="flex justify-center">Language Selection</h2>
       <div className="flex justify-center mb-4">
+        <label htmlFor="mr-4" style={{ paddingRight: 10 }}>
+          <input
+            type="radio"
+            name="language"
+            value="contentReleaseEN"
+            checked={lang === "contentReleaseEN"}
+            onChange={() => setLang("contentReleaseEN")}
+          />
+          Content Release Validation
+        </label>
         <label className="mr-4">
           <input
             type="radio"
