@@ -12,8 +12,7 @@ import {
   Paragraph,
   SourceEditing,
   Undo,
-  PasteFromOffice,
-  GeneralHtmlSupport, // ✅ Import GeneralHtmlSupport Plugin
+  PasteFromOffice, // ✅ Import GeneralHtmlSupport Plugin
 } from "ckeditor5";
 
 import "ckeditor5/ckeditor5.css";
