@@ -12,8 +12,9 @@ import {
   Paragraph,
   SourceEditing,
   Undo,
+  PasteFromOffice,
+  GeneralHtmlSupport, // ✅ Import GeneralHtmlSupport Plugin
 } from "ckeditor5";
-// import { SlashCommand } from "ckeditor5-premium-features";
 
 import "ckeditor5/ckeditor5.css";
 
@@ -43,6 +44,7 @@ const Editor = ({ data, className }: IEditor) => {
               "image",
             ],
           },
+          extraPlugins: [PasteFromOffice], // ✅ Enable GHS Plugin
           plugins: [
             Bold,
             Essentials,
@@ -55,6 +57,8 @@ const Editor = ({ data, className }: IEditor) => {
             Heading,
             List,
             Image,
+            PasteFromOffice,
+            // GeneralHtmlSupport, // ✅ Siguraduhin na kasama sa `plugins` array
           ],
         }}
         data={data ? data : ""}
