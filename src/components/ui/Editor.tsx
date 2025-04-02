@@ -20,9 +20,10 @@ import "ckeditor5/ckeditor5.css";
 interface IEditor {
   data?: string;
   className?: string;
+  onChange?: (value: string) => void;
 }
 
-const Editor = ({ data, className }: IEditor) => {
+const Editor = ({ data, className, onChange }: IEditor) => {
   return (
     <div className={className} style={{ overflow: "auto" }}>
       <CKEditor
@@ -61,6 +62,12 @@ const Editor = ({ data, className }: IEditor) => {
           ],
         }}
         data={data ? data : ""}
+        onChange={(_, editor) => {
+          const content = editor.getData();
+          if (onChange) {
+            onChange(content);
+          }
+        }}
       />
     </div>
   );

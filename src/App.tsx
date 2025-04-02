@@ -157,12 +157,17 @@ const App = () => {
         </label>
       </div>
       <div className="flex justify-around w-full h-full">
-        <div className="w-[32%] h-full">
+        <div className="w-[50%] h-full">
           <Label className="block mb-2 w-full">Editor:</Label>
-          <Editor className="h-full w-full" />
+          {/* <Editor className="h-full w-full" /> */}
+          <Editor
+            className="h-full w-full"
+            data={inputHtml}
+            onChange={setInputHtml}
+          />
         </div>
 
-        <div className="w-[32%] h-full">
+        {/* <div className="w-[32%] h-full">
           <Label htmlFor="input" className="block mb-2">
             Input:
           </Label>
@@ -172,9 +177,9 @@ const App = () => {
             onChange={(e) => setInputHtml(e.target.value)}
             id="input"
           />
-        </div>
+        </div> */}
 
-        <div className="w-[32%] h-full">
+        <div className="w-[45%] h-full">
           <Label htmlFor="output" className="block mb-2">
             Output:
           </Label>

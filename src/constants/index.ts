@@ -4002,6 +4002,8 @@ const urlsMapping = {
       "https://www.allaboutvision.com/ru/glaznye-travmy/obychnye-glaznye-travmy/",
       "https://www.allaboutvision.com/ru/glaznye-travmy/sinyak/",
       "https://www.allaboutvision.com/ru/glaznye-travmy/ssadina-rogovitsy/",
+      "https://www.allaboutvision.com/locator/",
+
     ],
     newUrls: [
       "https://www.allaboutvision.com/ru/privacy/",
@@ -4231,6 +4233,7 @@ const urlsMapping = {
       "https://www.allaboutvision.com/ru/sostoyaniya/travmi/obychnye-glaznye-travmy/",
       "https://www.allaboutvision.com/ru/sostoyaniya/travmi/sinyak/",
       "https://www.allaboutvision.com/ru/sostoyaniya/travmi/ssadina-rogovitsy/",
+      "https:///ru/store-locator/",
     ],
   },
   contentReleaseEN: {
