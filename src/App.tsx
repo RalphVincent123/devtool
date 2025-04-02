@@ -89,7 +89,7 @@
 import { useEffect, useState } from "react";
 import Editor from "./components/ui/Editor";
 import { Label } from "./components/ui/label";
-import { Textarea } from "./components/ui/Textarea";
+// import { Textarea } from "./components/ui/Textarea";
 import urlsMapping from "./constants";
 import { getMappedUrl } from "./logic";
 
