@@ -4215,7 +4215,7 @@ const urlsMapping = {
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/roditeli-i-deti/zrenie-terapiya/",
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/roditeli-i-deti/zrenie-u-shkolnikov/",
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye zreniya/pitaniye/starenie-glaz/",
-      "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye zreniya/zashchita-ot-uf/solntsezashchitnye/",
+      "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye-zreniya/zashchita-ot-uf/solntsezashchitnye/",
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye-zreniya/izmeneniya-zreniya-s-vozrastom/",
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye-zreniya/sovety-po-borbe-s-poterej-zreniya/",
       "https://www.allaboutvision.com/ru/ukhod-za-glazami/zdorovye-zreniya/sposoby-zashchity-zreniya/",
