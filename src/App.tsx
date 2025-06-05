@@ -9,7 +9,7 @@ const App = () => {
   const [inputHtml, setInputHtml] = useState("");
   const [outputHtml, setOutputHtml] = useState("");
   const [lang, setLang] = useState<
-    "en" | "de" | "ru" | "contentReleaseEN" | "es" | "zh"
+    "en" | "de" | "ru" | "contentReleaseEN" | "es" | "zh" | "ar"
   >("en");
 
   useEffect(() => {
@@ -86,6 +86,16 @@ const App = () => {
             onChange={() => setLang("zh")}
           />
           Chinese
+        </label>
+        <label className="mr-4">
+          <input
+            type="radio"
+            name="language"
+            value="ar"
+            checked={lang === "ar"}
+            onChange={() => setLang("ar")}
+          />
+          Arabic
         </label>
       </div>
       <div className="flex justify-around w-full h-full">
