@@ -9,7 +9,16 @@ const App = () => {
   const [inputHtml, setInputHtml] = useState("");
   const [outputHtml, setOutputHtml] = useState("");
   const [lang, setLang] = useState<
-    "en" | "de" | "ru" | "contentReleaseEN" | "es" | "zh" | "ar" | "fr" | "tr"
+    | "en"
+    | "de"
+    | "ru"
+    | "contentReleaseEN"
+    | "es"
+    | "zh"
+    | "ar"
+    | "fr"
+    | "tr"
+    | "pt"
   >("en");
 
   const languageOptions = [
@@ -22,6 +31,7 @@ const App = () => {
     { value: "ar", label: "Arabic" },
     { value: "fr", label: "French (Fr)" },
     { value: "tr", label: "Turkey (tr)" },
+    { value: "pt", label: "Portuguese" },
   ] as const;
 
   useEffect(() => {
