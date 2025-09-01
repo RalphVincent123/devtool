@@ -9021,7 +9021,6 @@ newUrls:[
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/cause-della-miopia/",
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/con-quale-altro-nome-e-conosciuta-la-miopia/",
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/controllo-della-miopia-domande-frequenti",
-"/",
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/cosa-e-la-miopia/",
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/grave-miopia/",
 "https://www.allaboutvision.com/it/patologie-oculari/miopia/la-miopia-e-comune/",
