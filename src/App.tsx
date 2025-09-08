@@ -22,6 +22,7 @@ const App = () => {
     | "ja"
     | "IT"
     | "hi"
+    | "th"
   >("en");
 
   const languageOptions = [
@@ -38,6 +39,7 @@ const App = () => {
     { value: "ja", label: "Japanese" },
     { value: "IT", label: "italy" },
     { value: "hi", label: "India" },
+    { value: "th", label: "Thailand" },
   ] as const;
 
   useEffect(() => {
